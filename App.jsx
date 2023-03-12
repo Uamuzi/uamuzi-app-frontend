@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar, View } from 'expo-status-bar';
+
+import tw from "twrnc"
+import { default as OnboardingScreen } from './src/screens/OnboardingScreens/component/OnboardingScreen.tsx';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <View style={tw`flex-1 justify-center items-center bg-[#fff]`}>
       <StatusBar style="auto" />
+     
+        <OnboardingScreen />
+      
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
