@@ -1,4 +1,5 @@
-import { StatusBar, View } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
+import { View } from 'react-native';
 
 import tw from "twrnc"
 import { default as OnboardingScreen } from './src/screens/OnboardingScreens/component/OnboardingScreen.tsx';
