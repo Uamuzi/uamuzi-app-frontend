@@ -84,7 +84,7 @@ const OnboardingScreen = () => {
         />
         <Pagination data={Slides} scrollX={scrollX} index={index} />
       </View>
-      <View style={{ position: 'absolute', bottom: 90, left: 0, right: 0 }}>
+      <View style={{ position: 'absolute', bottom: 70, left: 0, right: 0 }}>
         <Pressable onPress={slideNext} style={tw`bg-[#8067AD] h-40px mt-15px items-center ml-32px mr-32px rounded-full shadow-lg`}>
           <Text style={tw`text-white top-10% text-lg `}>{nextButtonTitle}</Text>
         </Pressable>
