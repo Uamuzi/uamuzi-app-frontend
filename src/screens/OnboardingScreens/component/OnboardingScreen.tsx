@@ -61,33 +61,35 @@ const OnboardingScreen = () => {
   }).current;
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1}}>
       <Pressable onPress={handleSkipPress}>
         <Text style={tw`text-right mt-70px mr-32px`}>Skip</Text>
       </Pressable>
-      <View style={{ height: 750 }}>
-        <FlatList
-          data={Slides}
-          renderItem={({ item }: any) => <SlideItem item={item} />}
-          horizontal
-          pagingEnabled
-          snapToAlignment="center"
-          showsHorizontalScrollIndicator={false}
-          onScroll={handleOnScroll}
-          onViewableItemsChanged={handleOnViewableItemsChanged}
-          viewabilityConfig={viewabilityConfig}
-          onMomentumScrollEnd={(event) => {
-            const index = Math.round(event.nativeEvent.contentOffset.x / Dimensions.get('window').width);
-            setCurrentPage(index);
-          }}
-          ref={slider}
-        />
-        <Pagination data={Slides} scrollX={scrollX} index={index} />
-      </View>
-      <View style={{ position: 'absolute', bottom: 70, left: 0, right: 0 }}>
-        <Pressable onPress={slideNext} style={tw`bg-[#8067AD] h-40px mt-15px items-center ml-32px mr-32px rounded-full shadow-lg`}>
-          <Text style={tw`text-white top-10% text-lg `}>{nextButtonTitle}</Text>
-        </Pressable>
+      <View style={tw`items-center justify-center`}>
+          <View style={{ height: 750 }}>
+            <FlatList
+              data={Slides}
+              renderItem={({ item }: any) => <SlideItem item={item} index={0} />}
+              horizontal
+              pagingEnabled
+              snapToAlignment="center"
+              showsHorizontalScrollIndicator={false}
+              onScroll={handleOnScroll}
+              onViewableItemsChanged={handleOnViewableItemsChanged}
+              viewabilityConfig={viewabilityConfig}
+              onMomentumScrollEnd={(event) => {
+                const index = Math.round(event.nativeEvent.contentOffset.x / Dimensions.get('window').width);
+                setCurrentPage(index);
+              }}
+              ref={slider}
+            />
+            <Pagination data={Slides} scrollX={scrollX} index={index} />
+          </View>
+          <View style={{ position: 'absolute', bottom: 90, left: 0, right: 0 }}>
+            <Pressable onPress={slideNext} style={tw`bg-[#8067AD] h-40px mt-15px items-center ml-32px mr-32px rounded-full shadow-lg`}>
+              <Text style={tw`text-white top-10% text-lg `}>{nextButtonTitle}</Text>
+            </Pressable>
+          </View>
       </View>
   </View>   
   );

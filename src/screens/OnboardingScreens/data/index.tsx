@@ -12,8 +12,7 @@ export default [
     img: Illustration01,
     title: "Welcome to",
     subTitle: "Governance and peace-building platform",
-    uamuziLogo: Uamuzi,
-    
+    uamuziLogo: Uamuzi, 
   },
   {
     id: 2,
@@ -39,6 +38,4 @@ export default [
     title: "Chat with friends",
     subTitle: "Enjoy peer-to-peer connection",
   },
-
-
 ];

@@ -14,14 +14,16 @@ type Item = {
   img: any,
   title: string,
   subTitle: string,
+  uamuziLogo: any,
 }
 
 type SlideItemProps = {
   item: Item,
+  index: number,
 }
 
-const SlideItem: React.FC<SlideItemProps> = ({item}) => {
-  
+const SlideItem: React.FC<SlideItemProps> = ({item, index}) => {
+  const isFirstItem = index === 0;
   return (
     <View style={styles.container}>
       <Image
@@ -34,6 +36,9 @@ const SlideItem: React.FC<SlideItemProps> = ({item}) => {
       <View style={tw`flex-0.4 items-center`}>
         <View style={tw`flex-row`}>
           <Text style={tw`text-2xl font-bold text-[#333333] text-center`}>{item.title}</Text>
+          {isFirstItem && item.uamuziLogo &&(<Image style={tw`w-93px h-34px ml-3px mt-[-3px]`}
+          source={item.uamuziLogo}
+          />)}
         </View>
         <Text style={tw`text-lg my-12px text-gray-700 text-center`}>{item.subTitle}</Text>
       </View>

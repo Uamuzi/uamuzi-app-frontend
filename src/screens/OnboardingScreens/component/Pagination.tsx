@@ -1,6 +1,8 @@
 import {StyleSheet, Animated, View, Dimensions} from 'react-native';
 import React from 'react';
 
+
+
 import tw from "twrnc"
 const {width} = Dimensions.get('screen');
 
@@ -12,7 +14,7 @@ interface PaginationProps {
 
 const Pagination = ({data, scrollX, index}: PaginationProps) => {
   return (
-    <View style={tw`absolute bottom-50 flex flex-row w-full items-center justify-center`}>
+    <View style={tw`absolute bottom-45 flex flex-row w-full items-center justify-center`}>
       {data.map((_, idx: number) => {
         const inputRange = [(idx - 1) * width, idx * width, (idx + 1) * width];
 
