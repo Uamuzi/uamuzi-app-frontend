@@ -1,4 +1,4 @@
-import { Animated, FlatList, StyleSheet, Text, View, Pressable, Dimensions } from 'react-native';
+import { Animated, FlatList, StyleSheet, Text, View, Pressable, Dimensions, Alert } from 'react-native';
 import React, { useRef, useState, useMemo } from 'react';
 import Slides from '../data';
 import SlideItem from './SlideItem';
@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 import tw from 'twrnc';
 
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation}:{navigation:any}) => {
   const [index, setIndex] = useState<number>(0);
   const scrollX = useRef<Animated.Value>(new Animated.Value(0)).current;
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -17,8 +17,10 @@ const OnboardingScreen = () => {
 
   const slider = useRef<FlatList<any>>(null);
   const slideNext = () => {
-    if (isLastPage) {
-       // navigate to Login screen if on last page
+    if (nextButtonTitle === "Let’s Get Started") {
+       navigation.navigate('LoginOne');
+      // console.log('Navigate')
+      // Alert.alert("Login screen")
     } else {
       const nextIndex = currentPage + 1;
       const offset = nextIndex * Dimensions.get('window').width;
