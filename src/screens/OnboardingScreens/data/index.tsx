@@ -4,13 +4,15 @@ import Illustration03 from '../assets/Illustration03.png';
 import Illustration04 from '../assets/Illustration04.png';
 import Illustration05 from '../assets/Illustration05.png';
 
+import Uamuzi from '../assets/uamuziLogo.png';
+
 export default [
   {
     id: 1,
     img: Illustration01,
     title: "Welcome to",
     subTitle: "Governance and peace-building platform",
-    uamuziLogo: "Uamuzi",
+    uamuziLogo: Uamuzi,
     
   },
   {
