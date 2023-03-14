@@ -8,7 +8,7 @@ interface InputProps extends TextInputProps {
   }
 
   const Input: React.FC<InputProps> = ({ placeholder}) => (
-    <Pressable style={tw`ml-32px mr-32px `} onPress={Keyboard.dismiss}>
+    <Pressable style={tw`ml-32px mr-32px `}>
       <TextInput style={tw`text-sm text-[#969696]  mt-26px pb-10px`}
       keyboardAppearance="dark" placeholder={placeholder} 
       />
