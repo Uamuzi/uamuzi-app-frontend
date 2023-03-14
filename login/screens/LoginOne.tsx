@@ -25,6 +25,10 @@ const LoginOne= ({navigation}:{navigation:any}) => {
         navigation.navigate('ForgotPw1');
     };
 
+    const navSignup = () =>{
+        navigation.navigate('SignUp1')
+    } 
+
     const errorMessage = 'Input is required!'
 
     const handleSubmit = () => {
@@ -102,7 +106,7 @@ const LoginOne= ({navigation}:{navigation:any}) => {
             <View>
             <View style={tw`items-center flex flex-row justify-center mt-20px`}>
                 <Text style={tw`text-lg`}>Don't have an account?</Text>
-                <Text style={tw`text-lg px-2px text-[#8067AD]`} onPress={() => console.log('Sign up')}>Sign Up</Text>
+                <Text style={tw`text-lg px-2px text-[#8067AD]`} onPress={navSignup}>Sign Up</Text>
                 <Text></Text>
             </View>
             </View>

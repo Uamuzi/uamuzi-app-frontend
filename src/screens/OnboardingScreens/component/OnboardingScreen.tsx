@@ -18,7 +18,7 @@ const OnboardingScreen = ({navigation}:{navigation:any}) => {
   const slider = useRef<FlatList<any>>(null);
   const slideNext = () => {
     if (nextButtonTitle === "Let’s Get Started") {
-       navigation.navigate('LoginOne');
+       navigation.navigate('SignUp1');
       // console.log('Navigate')
       // Alert.alert("Login screen")
     } else {
