@@ -62,7 +62,7 @@ const LoginOne= ({navigation}:{navigation:any}) => {
 
             <View style={tw`ml-32px mr-32px  border-b border-[#969696]`}>
 
-                <Image style={tw`pointer-events-none w-6 h-8 mt-20px absolute border-[#969696]`}
+                <Image style={tw`  w-6 h-8 mt-20px absolute border-[#969696]`}
                 source={require('../assets/lock.png')}
                 />
                 <TextInput style={tw`text-sm text-[#969696] ml-32px mr-32px mt-26px pb-10px`} keyboardAppearance="dark"
@@ -74,7 +74,7 @@ const LoginOne= ({navigation}:{navigation:any}) => {
         getErrorsInField('date').map(errorMessage => (
           <Text>{errorMessage}</Text>
         ))}
-                <TouchableOpacity style={tw`ml-303px absolute top-1/2 transform`}
+                <TouchableOpacity style={tw`ml-303px absolute mt-6 `}
                 onPress={
                     ()=>{
                         setVisible(!visible)

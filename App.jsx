@@ -25,7 +25,7 @@ export default function App() {
     // <View style={tw`flex-1 justify-center items-center bg-[#fff]`}>
     //   <StatusBar style="auto" />
      
-    //     <SignUp2 />
+    //     <SignUp1 />
       
     // </View>
     <NavigationContainer>

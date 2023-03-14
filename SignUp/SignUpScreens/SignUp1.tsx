@@ -43,14 +43,14 @@ const SignUp1= ({navigation}:{navigation:any}) => {
             source={require('../assets/progress1.png')}/>
             
             <View style={tw`relative block ml-32px mr-32px border-b border-[#969696] mt-15px`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
+                <Image style={tw`  w-6 h-6 absolute mt-6 border-b border-[#969696]`}
                 source={require('../assets/person.png')}
                 />
                 <Input placeholder={'First name'} value={firstName} onChangeText={(newValue)=> setFirstName(newValue)} /> 
             </View>    
                 
             <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
+                <Image style={tw`  w-6 h-6 absolute mt-6 border-b border-[#969696]`}
                 source={require('../assets/person.png')}
                 />
                 <Input placeholder={'Last name'} value={lastName} onChangeText={(newValue)=> setLastName(newValue)} 
@@ -58,7 +58,7 @@ const SignUp1= ({navigation}:{navigation:any}) => {
             </View>    
                 
             <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
+                <Image style={tw`  w-6 h-6 absolute mt-6 border-b border-[#969696]`}
                 source={require('../assets/id.png')}
                 />
                 <Input placeholder={'Uamuzi ID'} value={idNumber} onChangeText={(newValue)=> setIDNumber(newValue)} /> 
@@ -66,14 +66,14 @@ const SignUp1= ({navigation}:{navigation:any}) => {
                 
             <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
             
-                <AntDesign style={tw` w-6 h-6 absolute top-1/2 transform`}
+                <AntDesign style={tw` w-6 h-6 absolute mt-6`}
                 name="lock1" size={25} color="#969696" />
                 <TextInput style={tw`text-sm text-[#969696] ml-32px mr-32px mt-26px pb-10px`} keyboardAppearance="dark"
                 placeholder={'Password'} value={password} 
                 onChangeText={(newValue)=> setPassword(newValue)}
                 secureTextEntry={visible}
                 /> 
-                <TouchableOpacity style={tw`ml-303px absolute top-1/2 transform`}
+                <TouchableOpacity style={tw`ml-303px absolute mt-6`}
                 onPress={
                     ()=>{
                         setVisible(!visible)
@@ -90,7 +90,7 @@ const SignUp1= ({navigation}:{navigation:any}) => {
             </View>   
                  
             <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
-                <AntDesign style={tw`absolute top-1/2 transform`}
+                <AntDesign style={tw`absolute mt-6`}
                 name="lock1" size={25} color="#969696" />
 
                 <TextInput style={tw`text-sm text-[#969696] ml-32px mr-32px mt-26px pb-10px`} keyboardAppearance="dark"
@@ -98,7 +98,7 @@ const SignUp1= ({navigation}:{navigation:any}) => {
                 onChangeText={(newValue)=> setConfirmPassword(newValue)}
                 secureTextEntry={visible}
                 /> 
-                <TouchableOpacity style={tw`ml-303px absolute top-1/2 transform`}
+                <TouchableOpacity style={tw`ml-303px absolute mt-6`}
                 onPress={
                     ()=>{
                         setVisible(!visible)
@@ -115,7 +115,7 @@ const SignUp1= ({navigation}:{navigation:any}) => {
             </View> 
 
             <View style={tw`mt-20px mr-32px ml-32px`}>
-                <TouchableOpacity style={tw`relative block  top-1/2 transform`}
+                <TouchableOpacity style={tw`relative block mt-6`}
                 onPress={
                     ()=>{
                         setAgree(!agree)   
