@@ -11,9 +11,7 @@ import Input from "../../customStyles/CustomTextInput";
 import CustomButton from "../../customStyles/CustomButton";
 
 const SignUp4 = ({ navigation }: { navigation: any }) => {
-  const [emailAddress, setEmailAddress] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-
+  
   const handleNext = () => {
     navigation.navigate("SignUp5");
   };
@@ -36,6 +34,9 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
   ];
   
     const [value, setValue] = useState<string>();
+    const [value1, setValue1] = useState<string>();
+    const [value2, setValue2] = useState<string>();
+    const [value3, setValue3] = useState<string>();
     const [isFocus, setIsFocus] = useState(false);
   
     const renderLabel = () => {
@@ -61,13 +62,13 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
       <CustomTitle>Sign Up</CustomTitle>
       <CustomSubtitle>Last step. Select your domains</CustomSubtitle>
       <Image
-        style={tw`ml-32px mt-16px h-4px w-325px`}
+        style={tw`mx-auto w-99 mt-16px h-4px `}
         source={require("../assets/progress3.png")}
       />
       
       <View style={styles.container}>
       <Dropdown
-        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+        style={[tw`ml-8px mr-8px w-99 border-b border-[#969696]`, isFocus && { borderColor: 'blue' }]}
         placeholderStyle={styles.placeholderStyle}
         selectedTextStyle={styles.selectedTextStyle}
         inputSearchStyle={styles.inputSearchStyle}
@@ -93,7 +94,7 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
 
     <View style={styles.container}>
       <Dropdown
-        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+        style={[tw`ml-8px mr-8px w-99 border-b border-[#969696]`, isFocus && { borderColor: 'blue' }]}
         placeholderStyle={styles.placeholderStyle}
         selectedTextStyle={styles.selectedTextStyle}
         inputSearchStyle={styles.inputSearchStyle}
@@ -107,11 +108,11 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
         searchField="search"
         placeholder={!isFocus ? 'Select your County' : '...'}
         searchPlaceholder="Search..."
-        value={value}
+        value={value1}
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
         onChange={(item) => {
-          setValue(item.value);
+          setValue1(item.value);
           setIsFocus(false);
         }}
         
@@ -120,7 +121,7 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
 
     <View style={styles.container}>
       <Dropdown
-        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+        style={[tw`ml-8px mr-8px w-99 border-b border-[#969696]`, isFocus && { borderColor: 'blue' }]}
         placeholderStyle={styles.placeholderStyle}
         selectedTextStyle={styles.selectedTextStyle}
         inputSearchStyle={styles.inputSearchStyle}
@@ -134,11 +135,11 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
         searchField="search"
         placeholder={!isFocus ? 'Select your Constituency' : '...'}
         searchPlaceholder="Search..."
-        value={value}
+        value={value2}
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
         onChange={(item) => {
-          setValue(item.value);
+          setValue2(item.value);
           setIsFocus(false);
         }}
         
@@ -148,7 +149,7 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
 
     <View style={styles.container}>
       <Dropdown
-        style={[styles.dropdown, isFocus && { borderColor: 'blue' }]}
+        style={[tw`ml-8px mr-8px w-99 border-b border-[#969696]`, isFocus && { borderColor: 'blue' }]}
         placeholderStyle={styles.placeholderStyle}
         selectedTextStyle={styles.selectedTextStyle}
         inputSearchStyle={styles.inputSearchStyle}
@@ -162,11 +163,11 @@ const SignUp4 = ({ navigation }: { navigation: any }) => {
         searchField="search"
         placeholder={!isFocus ? 'Select your Ward' : '...'}
         searchPlaceholder="Search..."
-        value={value}
+        value={value3}
         onFocus={() => setIsFocus(true)}
         onBlur={() => setIsFocus(false)}
         onChange={(item) => {
-          setValue(item.value);
+          setValue3(item.value);
           setIsFocus(false);
         }}
         
@@ -193,7 +194,7 @@ const styles = ({
       borderColor: 'gray',
       borderWidth: 0.5,
       borderRadius: 8,
-      paddingHorizontal: 8,
+      // paddingHorizontal: 8,
     },
     icon: {
       marginRight: 5,

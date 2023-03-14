@@ -27,9 +27,7 @@ const LoginOne= ({navigation}:{navigation:any}) => {
 
     const navSignup = () =>{
         navigation.navigate('SignUp1')
-    } 
-
-    const errorMessage = 'Input is required!'
+    }
 
     const handleSubmit = () => {
 
@@ -55,16 +53,16 @@ const LoginOne= ({navigation}:{navigation:any}) => {
 
 
             <View style={tw`ml-32px mr-32px  border-b border-[#969696]`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 border-[#969696]`}
+                <Image style={tw`w-6 h-6  mt-22px absolute border-[#969696]`}
                 source={require('../assets/at.png')}
                 />
                 <TextInput style={tw`text-sm text-[#969696] ml-32px mr-32px mt-26px pb-10px`} keyboardAppearance="dark"
                  placeholder={'Uamuzi ID or Mobile number'} value={idNumber} onChangeText={(newValue)=> setIDNumber(newValue)} /> 
             </View>   
 
-            <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
+            <View style={tw`ml-32px mr-32px  border-b border-[#969696]`}>
 
-                <Image style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 border-[#969696]`}
+                <Image style={tw`pointer-events-none w-6 h-8 mt-20px absolute border-[#969696]`}
                 source={require('../assets/lock.png')}
                 />
                 <TextInput style={tw`text-sm text-[#969696] ml-32px mr-32px mt-26px pb-10px`} keyboardAppearance="dark"

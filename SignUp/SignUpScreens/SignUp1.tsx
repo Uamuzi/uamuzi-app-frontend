@@ -43,14 +43,14 @@ const SignUp1= ({navigation}:{navigation:any}) => {
             source={require('../assets/progress1.png')}/>
             
             <View style={tw`relative block ml-32px mr-32px border-b border-[#969696] mt-15px`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 border-b border-[#969696]`}
+                <Image style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
                 source={require('../assets/person.png')}
                 />
                 <Input placeholder={'First name'} value={firstName} onChangeText={(newValue)=> setFirstName(newValue)} /> 
             </View>    
                 
             <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 border-b border-[#969696]`}
+                <Image style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
                 source={require('../assets/person.png')}
                 />
                 <Input placeholder={'Last name'} value={lastName} onChangeText={(newValue)=> setLastName(newValue)} 
@@ -58,7 +58,7 @@ const SignUp1= ({navigation}:{navigation:any}) => {
             </View>    
                 
             <View style={tw`relative ml-32px mr-32px  border-b border-[#969696]`}>
-                <Image style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 border-b border-[#969696]`}
+                <Image style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
                 source={require('../assets/id.png')}
                 />
                 <Input placeholder={'Uamuzi ID'} value={idNumber} onChangeText={(newValue)=> setIDNumber(newValue)} /> 

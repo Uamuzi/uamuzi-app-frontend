@@ -40,7 +40,7 @@ const SignUp2 = ({ navigation }: { navigation: any }) => {
         style={tw`relative block ml-32px mr-32px  border-b border-[#969696] mt-20px`}
       >
         <Image
-          style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 border-b border-[#969696]`}
+          style={tw`pointer-events-none w-6 h-6 absolute mt-6 border-b border-[#969696]`}
           source={require("../assets/id.png")}
         />
         <Input
@@ -54,7 +54,7 @@ const SignUp2 = ({ navigation }: { navigation: any }) => {
         style={tw`relative block ml-32px mr-32px  border-b border-[#969696]`}
       >
         <Image
-          style={tw`pointer-events-none w-6 h-6 absolute top-1/2 transform -translate-y-1/2 `}
+          style={tw`pointer-events-none w-6 h-6 absolute mt-6 `}
           source={require("../assets/phone.png")}
         />
         <Input

@@ -7,7 +7,7 @@ import tw from 'twrnc';
 
 export default function CustomSubtitle(props:any) {
   return (
-    <Text style={tw`text-[#969696] text-sm text-center mr-32px ml-32px pt-16px`}>
+    <Text style={tw`text-[#969696] text-sm mr-10px ml-20px pt-16px`}>
       {props.children}
     </Text>
   );
